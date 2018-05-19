@@ -58,6 +58,7 @@ while True:
     page = gamebook[index]
     story = page[0]
     print(story)
+    print()
     options = page[1]
 
     i = 1
@@ -66,7 +67,9 @@ while True:
         i = i + 1
 
     if len(options) > 0:
-        choice = input()
+        print()
+        choice = input('Your choice: ')
+        print()
         try:
             choice = int(choice) - 1
             option = options[choice]
