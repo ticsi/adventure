@@ -53,6 +53,12 @@ gamebook = {
     )
 }
 
+
+def print_options(options):
+    for number, option in enumerate(options):
+        print(f'{number + 1} {option[0]}')
+
+
 index = 0
 while True:
     page = gamebook[index]
@@ -61,8 +67,7 @@ while True:
     print()
     options = page[1]
 
-    for number, option in enumerate(options):
-        print(f'{number + 1} {option[0]}')
+    print_options(options)
 
     if len(options) > 0:
         print()
