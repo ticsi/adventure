@@ -79,5 +79,6 @@ while True:
             index = option[1]
         except (ValueError, IndexError):
             print('Error.')
+            break
     else:
         break
