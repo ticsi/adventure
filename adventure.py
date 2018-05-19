@@ -26,7 +26,8 @@ gamebook = {
         'Which way do you continue?',
         [
             ('up', 3),
-            ('down', 4)
+            ('down', 4),
+            ('go back', 0)
         ]
     ),
 
