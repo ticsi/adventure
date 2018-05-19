@@ -60,6 +60,15 @@ def print_options(options):
         print(f'{number + 1} {option[0]}')
 
 
+def select_option(options):
+    choice = input('Your choice: ')
+    try:
+        choice = int(choice) - 1
+        return options[choice]
+    except (ValueError, IndexError):
+        return None
+
+
 index = 0
 while True:
     page = gamebook[index]
@@ -72,14 +81,12 @@ while True:
 
     if len(options) > 0:
         print()
-        choice = input('Your choice: ')
+        option = select_option(options)
         print()
-        try:
-            choice = int(choice) - 1
-            option = options[choice]
-            index = option[1]
-        except (ValueError, IndexError):
+        if (option is None):
             print('Error.')
             break
+        else:
+            index = option[1]
     else:
         break
