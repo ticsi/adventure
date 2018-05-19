@@ -62,7 +62,7 @@ while True:
 
     i = 1
     for option in options:
-        print(str(i) + ' ' + str(option[0]))
+        print(f'{i} {option[0]}')
         i = i + 1
 
     if len(options) > 0:
