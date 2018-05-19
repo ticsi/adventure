@@ -61,12 +61,13 @@ def print_options(options):
 
 
 def select_option(options):
-    choice = input('Your choice: ')
-    try:
-        choice = int(choice) - 1
-        return options[choice]
-    except (ValueError, IndexError):
-        return None
+    while True:
+        choice = input('Your choice: ')
+        try:
+            choice = int(choice) - 1
+            return options[choice]
+        except (ValueError, IndexError):
+            print('You can\'t do that.')
 
 
 index = 0
@@ -83,10 +84,6 @@ while True:
         print()
         option = select_option(options)
         print()
-        if (option is None):
-            print('Error.')
-            break
-        else:
-            index = option[1]
+        index = option[1]
     else:
         break
