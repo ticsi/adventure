@@ -61,10 +61,8 @@ while True:
     print()
     options = page[1]
 
-    i = 1
-    for option in options:
-        print(f'{i} {option[0]}')
-        i = i + 1
+    for number, option in enumerate(options):
+        print(f'{number + 1} {option[0]}')
 
     if len(options) > 0:
         print()
